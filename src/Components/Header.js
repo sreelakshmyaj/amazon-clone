@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Badge } from '@mui/material';
+import { useStateValue } from '../StateProvider';
 
 const Header = () => {
+  const [{ cart }] = useStateValue();
+  console.log(cart);
   return (
     <nav className='header'>
         <Link to="/">
@@ -32,7 +35,7 @@ const Header = () => {
 
           <Link to="/checkout">
             <div className='header__optionCart'>
-              <Badge badgeContent={1} color='primary'>
+              <Badge badgeContent={cart.length} color='primary'>
                 <ShoppingCartOutlinedIcon className='header__optionCartIcon'/>
               </Badge>
             </div>
