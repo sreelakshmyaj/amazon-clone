@@ -203,3 +203,51 @@ nav {
 .product__btn:hover {
   background-color: #f0ca07;
 }
+
+/* Checkout.js */
+.checkout__container {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.checkout__containerItems {
+  background-color: #fff;
+  flex: 2;
+  padding: 1rem;
+}
+
+hr {
+  border: none;
+  background-color: #c1c1c1;
+  height: 1px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkout__containerSummary {
+  background-color: #fff;
+  flex: 1;
+  padding: 1rem;
+  height: 120px;
+  max-width: 300px;
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+}
+
+.item p {
+  font-size: 1.2rem;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.checkout__containerSummary button {
+  width: 100%;
+}
