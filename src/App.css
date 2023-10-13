@@ -265,7 +265,7 @@ hr {
 }
 
 /* Login.js */
-.login__container {
+.login {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -285,7 +285,7 @@ hr {
   margin-top: 2rem;
 }
 
-.login__form  p:first-of-type {
+.login__formHeader {
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
