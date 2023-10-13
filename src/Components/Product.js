@@ -12,7 +12,7 @@ const Product = (props) => {
                 id: props.id,
                 title: props.title,
                 price: props.price,
-                rating: props.rating
+                image: props.image
             }
         })
     }
