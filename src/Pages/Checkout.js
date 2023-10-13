@@ -41,7 +41,7 @@ export default Checkout
 
 const CheckoutContainer = (props) => {
 
-    const [{cart}, dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue();
 
 
     const removeFromCart = () => {
