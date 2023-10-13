@@ -1,6 +1,7 @@
 import React from 'react'
 import StarIcon from '@mui/icons-material/Star';
 import { useStateValue } from '../StateProvider';
+import CurrencyFormat from 'react-currency-format';
 
 const Product = (props) => {
 
@@ -29,7 +30,16 @@ const Product = (props) => {
                     ))
                 }
             </div>
-            <p className='product__infoPrice'>&#8377;{props.price}</p>
+            <CurrencyFormat 
+                renderText={(value) => (
+                    <p className='product__infoPrice'>{value}</p>
+                )}
+                decimalScale={2}
+                value={props.price}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix='&#8377;'
+            />
         </div>
         <button className='btn product__btn' onClick={addToCart}>Add To Cart</button>
     </div>
