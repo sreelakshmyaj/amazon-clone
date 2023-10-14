@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Checkout from './Pages/Checkout';
 import Login from './Pages/Login';
+import ProductInfo from './Pages/ProductInfo';
 import { useStateValue } from './StateProvider';
 import { auth } from './Firebase'
 
@@ -39,6 +40,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/product-info' element={<ProductInfo />} />
         </Routes>
       </div>
     </Router>

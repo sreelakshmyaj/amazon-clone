@@ -2,6 +2,7 @@ import React from 'react'
 import StarIcon from '@mui/icons-material/Star';
 import { useStateValue } from '../StateProvider';
 import CurrencyFormat from 'react-currency-format';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
 
@@ -22,7 +23,7 @@ const Product = (props) => {
     <div className='product'>
         <img src={props.image} alt=" "/>
         <div className='product__info'>
-            <p className='product__infoTitle'>{props.title}</p>
+            <p className='product__infoTitle'><Link to="/product-info" state={{title: props.title, price: props.price, image: props.largeImage, rating: props.rating, mrp:props.mrp}}>{props.title}</Link></p>
             <div className='product__rating'>
                 {
                     Array(props.rating).fill().map((_) => (

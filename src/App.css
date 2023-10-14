@@ -179,12 +179,9 @@ nav {
   text-decoration: underline;
 }
 
-.product__rating {
-  color: #f90;
-}
-
 .product__ratingStar {
   width: 18px !important;
+  color: #f90;
 }
 
 .product__infoPrice {
@@ -336,4 +333,138 @@ hr {
 
 .login__bottomBtn:hover {
   background-color: #f4fbfe;
+}
+
+.productInfo {
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.productInfo__image {
+  flex: 2;
+  position: sticky;
+  top: 80px;
+  margin-left: 2rem;
+}
+
+.productInfo__container {
+  flex: 2;
+}
+
+.productInfo__checkout {
+  flex: 1;
+}
+
+.productInfo__containerTitle {
+  font-size: 1.6rem;
+}
+
+.productInfo__rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.productInfo__rating .rating {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.price__discount {
+  font-size: 1.5rem;
+  color: #B12704;
+  margin-right: 10px;
+}
+
+.productInfo__price .price,
+.productInfo__checkout .price{
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.mrp {
+  color: #606060;
+  font-size: 13px;
+}
+
+.mrp span {
+  text-decoration: line-through;
+}
+
+.productInfo__services {
+  display: flex;
+  gap: 1rem;
+}
+
+.service {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  width: 60px;
+  color: #007185;
+}
+
+.productInfo__about {
+  margin-top: 2rem;
+  font-size: 15px;
+}
+
+.productInfo__about li {
+  margin-top: 1rem;
+}
+
+.productInfo__about ul {
+  margin-left: 22px;
+}
+
+.stock {
+  color: green;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.productInfo__checkout {
+  background-color: #fff;
+  width: 300px;
+  border: 1px solid #898787;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.productInfo__checkout button {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.productInfo__checkout .text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.lock__icon {
+  color: #898787;
+  width: 18px !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .productInfo__image {
+    width: 250px;
+  }
+
+  .productInfo__checkout {
+    margin-top: 5rem;
+    z-index: 1;
+  }
 }
