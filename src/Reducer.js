@@ -8,6 +8,11 @@ export const getCartTotal = (cart) =>
 
 function reducer(state, action) {
     switch(action.type) {
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
+            }
         case 'ADD_TO_CART': 
             return {
                 ...state,

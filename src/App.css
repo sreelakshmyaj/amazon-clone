@@ -270,6 +270,7 @@ hr {
   display: flex;
   align-items: center;
   flex-flow: column wrap;
+  margin: 1rem;
 }
 
 .login__logo {
@@ -314,4 +315,25 @@ hr {
 
 .login__form small {
   font-size: 12px;
+}
+
+.login__bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.login__bottomText {
+  font-size: 13px;
+  color: #606060;
+}
+
+.login__bottomBtn {
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
+  border-radius: 0.5rem;
+}
+
+.login__bottomBtn:hover {
+  background-color: #f4fbfe;
 }
