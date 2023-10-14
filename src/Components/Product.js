@@ -23,7 +23,7 @@ const Product = (props) => {
     <div className='product'>
         <img src={props.image} alt=" "/>
         <div className='product__info'>
-            <p className='product__infoTitle'><Link to="/product-info" state={{title: props.title, price: props.price, image: props.largeImage, rating: props.rating, mrp:props.mrp}}>{props.title}</Link></p>
+            <p className='product__infoTitle'><Link to="/product-info" state={{id:props.id, title: props.title, price: props.price, image: props.largeImage, rating: props.rating, mrp:props.mrp}}>{props.title}</Link></p>
             <div className='product__rating'>
                 {
                     Array(props.rating).fill().map((_) => (

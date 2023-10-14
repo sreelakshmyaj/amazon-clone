@@ -3,11 +3,26 @@ import { useLocation } from 'react-router-dom'
 import Header from '../Components/Header';
 import StarIcon from '@mui/icons-material/Star';
 import { Lock } from '@mui/icons-material';
+import { useStateValue } from '../StateProvider';
 
 
 const ProductInfo = () => {
     const location = useLocation();
-    const { title, price, image, rating, mrp } = location.state;
+    const { id, title, price, image, rating, mrp } = location.state;
+
+    const [{ cart }, dispatch] = useStateValue();
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: id,
+                title: title,
+                price: price,
+                image: image
+            }
+        })
+    }
+
   return (
     <div>
     <Header />
@@ -69,7 +84,7 @@ const ProductInfo = () => {
                 <span className='price'>{price}</span>
             </div>
             <p className='stock'>In stock</p>
-            <button className='btn product__btn'>Add to Cart</button>
+            <button className='btn product__btn' onClick={addToCart}>Add to Cart</button>
             <div className='text'><Lock className='lock__icon'/><small style={{color: "#007185"}}> Secure Transcation</small></div>
             <div className='text'><input type='checkbox' /><small>Add gift option</small></div>
         </div>
